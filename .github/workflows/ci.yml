@@ -2,9 +2,9 @@ name: Java CI Pipeline
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -22,4 +22,4 @@ jobs:
           cache: maven
 
       - name: Build and Test Application
-        run: mvn -B package --file pom.xml
+        run: mvn -B package --file handicraft-marketplace/pom.xml
